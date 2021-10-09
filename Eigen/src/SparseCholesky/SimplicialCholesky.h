@@ -144,6 +144,16 @@ class SimplicialCholeskyBase : public SparseSolverBase<Derived>
       return derived();
     }
 
+    /** Returns the internal buffers used.
+     * This is needed for serialization.
+     */
+     CholMatrixType& getInternalMatrix() { return m_matrix; }
+     const CholMatrixType& getInternalMatrix() const { return m_matrix; }
+     VectorI& getInternalParent() { return m_parent; }
+     const VectorI& getInternalParent() const { return m_parent; }
+     VectorI& getInternalNonZerosPerCol() { return m_nonZerosPerCol; }
+     const VectorI& getInternalNonZerosPerCol() const { return m_nonZerosPerCol; }
+
 #ifndef EIGEN_PARSED_BY_DOXYGEN
     /** \internal */
     template<typename Stream>

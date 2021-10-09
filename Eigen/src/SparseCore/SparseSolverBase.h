@@ -64,7 +64,7 @@ solve_sparse_through_dense_panels(const Decomposition &dec, const Rhs& rhs, Dest
   *
   */
 template<typename Derived>
-class SparseSolverBase : internal::noncopyable
+class SparseSolverBase
 {
   public:
 
