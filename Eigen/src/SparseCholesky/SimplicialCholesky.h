@@ -147,12 +147,18 @@ class SimplicialCholeskyBase : public SparseSolverBase<Derived>
     /** Returns the internal buffers used.
      * This is needed for serialization.
      */
-     CholMatrixType& getInternalMatrix() { return m_matrix; }
-     const CholMatrixType& getInternalMatrix() const { return m_matrix; }
-     VectorI& getInternalParent() { return m_parent; }
-     const VectorI& getInternalParent() const { return m_parent; }
-     VectorI& getInternalNonZerosPerCol() { return m_nonZerosPerCol; }
-     const VectorI& getInternalNonZerosPerCol() const { return m_nonZerosPerCol; }
+    CholMatrixType& getInternalMatrix() { return m_matrix; }
+    const CholMatrixType& getInternalMatrix() const { return m_matrix; }
+    VectorType& getInternalDiag() { return m_diag; }
+    const VectorType& getInternalDiag() const { return m_diag; }
+    VectorI& getInternalParent() { return m_parent; }
+    const VectorI& getInternalParent() const { return m_parent; }
+    VectorI& getInternalNonZerosPerCol() { return m_nonZerosPerCol; }
+    const VectorI& getInternalNonZerosPerCol() const { return m_nonZerosPerCol; }
+    PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalP() { return m_P; }
+    const PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalP() const { return m_P; }
+    PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalPinv() { return m_Pinv; }
+    const PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalPinv() const { return m_Pinv; }
 
 #ifndef EIGEN_PARSED_BY_DOXYGEN
     /** \internal */
