@@ -159,6 +159,12 @@ class SimplicialCholeskyBase : public SparseSolverBase<Derived>
     const PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalP() const { return m_P; }
     PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalPinv() { return m_Pinv; }
     const PermutationMatrix<Dynamic, Dynamic, StorageIndex>& getInternalPinv() const { return m_Pinv; }
+    ComputationInfo& getInternalInfo() { return m_info; }
+    const ComputationInfo& getInternalInfo() const { return m_info; }
+    bool& getInternalFactorizationIsOk() { return m_factorizationIsOk; }
+    const bool& getInternalFactorizationIsOk() const { return m_factorizationIsOk; }
+    bool& getInternalAnalysisIsOk() { return m_analysisIsOk; }
+    const bool& getInternalAnalysisIsOk() const { return m_analysisIsOk; }
 
 #ifndef EIGEN_PARSED_BY_DOXYGEN
     /** \internal */
