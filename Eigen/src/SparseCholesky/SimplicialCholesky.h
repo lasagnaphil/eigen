@@ -165,6 +165,8 @@ class SimplicialCholeskyBase : public SparseSolverBase<Derived>
     const bool& getInternalFactorizationIsOk() const { return m_factorizationIsOk; }
     bool& getInternalAnalysisIsOk() { return m_analysisIsOk; }
     const bool& getInternalAnalysisIsOk() const { return m_analysisIsOk; }
+    bool& getIsInitialized() { return m_isInitialized; }
+    const bool& getIsInitialized() const { return m_isInitialized; }
 
 #ifndef EIGEN_PARSED_BY_DOXYGEN
     /** \internal */
